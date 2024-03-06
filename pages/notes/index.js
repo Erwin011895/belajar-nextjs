@@ -31,6 +31,24 @@ export default function Notes() {
     fetchingData();
   }, [])
 
+  const HandleDelete = async (id) => {
+    try {
+      const res = await fetch(`https://paace-f178cafcae7b.nevacloud.io/api/notes/delete/${id}`, {
+        method: 'DELETE', headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      const result = await res.json()
+      console.log(result)
+
+      if (result?.success) {
+        router.reload()
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   console.log(notes)
 
   return (
@@ -66,10 +84,10 @@ export default function Notes() {
                         justify='space-between'
                         flexWrap='wrap'
                       >
-                        <Button flex='1' variant='solid'>
+                        <Button flex='1' variant='solid' onClick={() => router.push(`/notes/edit/${item?.id}`)}>
                           Edit
                         </Button>
-                        <Button flex='1' variant='solid' colorScheme='red'>
+                        <Button flex='1' variant='solid' colorScheme='red' onClick={() => HandleDelete(item?.id)}>
                           Delete
                         </Button>
                       </CardFooter>
