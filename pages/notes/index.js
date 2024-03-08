@@ -16,11 +16,23 @@ import {
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useQueries } from "@/hooks/useQueries";
+import fetcher from "@/utils/fetcher";
+import useSWR from 'swr'
 
 const LayoutComponent = dynamic(() => import("@/layout"))
 
 export default function Notes() {
-  const { data, isLoading } = useQueries({ prefixUrl: `https://paace-f178cafcae7b.nevacloud.io/api/notes` })
+
+  // const { data, isLoading } = useQueries({
+  //   prefixUrl: `https://paace-f178cafcae7b.nevacloud.io/api/notes`
+  // })
+
+  const { data, error, isLoading } = useSWR(
+    'https://paace-f178cafcae7b.nevacloud.io/api/notes',
+    fetcher, {
+    refreshInterval: 600, // every x sec, call API
+    revalidateOnFocus: true, // focus ke tab browser => fetch API
+  })
 
   const router = useRouter()
   const [notes, setNotes] = useState();
