@@ -1,0 +1,782 @@
+{
+	"info": {
+		"_postman_id": "9371de96-7a6e-46d3-ae94-66cd7b74954b",
+		"name": "API Social Media",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3638594"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"admin\",\n    \"email\": \"admin@smk2.com\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/register",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"rehan@mail.com\",\n    \"password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/login",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"pace@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/forgot-password",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "me",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjI4NGVhMmQ3NWY0MDMxOWI5OTExOGM0ZGNlNDc3ODZiMTJlYzVmNmQ4OWY4NTAxZjM5MzhmNTE2ODE0OWQ3MTI0NmE5OWMzMmEyY2ZlMTAiLCJpYXQiOjE2OTc1NTg4ODYuNDQ0NTk5LCJuYmYiOjE2OTc1NTg4ODYuNDQ0NjA0LCJleHAiOjE2OTc2NDUyODYuNDI0NzYxLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.GA-1aMtzXuTqx3gccQhz6jPEjR_wj5g0P2750CJal65FuieopC0S2TZYuN8CF7phXoi3NmPF9i2X31FBI8RgfmYpNo0O2fYNB3v8hMe0AxbRM_Lb6JB9fahXLV9tzATNIIgkRQIecqCTYwSpEDgE9cuKbwxlgK96e8YohnWr6BJ7-g6yrz_RFDa-bW0e6_XGkqiyVFXRoHlwiclDdx8JXDXAP3vGkxiuMGXfkyVUDa4538VtARDuVmzwtY-IskiTVAiL2BKf2I23YyhmQgc0IcD_d88WeF6EFXFSxCLs5_zw5kxYaHK2sogpG0nk2NHIwRRsHThuTiqqfFlMsEfBzHMPXLbVcBI2DYtOm8cbHq7wlM-mW7S-gYWtGBDUqQlkti-MV_sIOwzuhyLoAX9nulJlrtR8iQSd_wqOjf11e5NAtRnu_mRc_aM2KddLx-Ef5pnPfEoKcNTNOdogy65eZb26BRAiNPEK8oyjgmzoci7jaQDMiwxpSzpN5jaIVYL5SKVAjolCvGj5WfSFY9azFoQPHTbQfRLjIoABuwplzY5Ljf73GN-wXt1Q4V9KxOFnBHN1Bk3xkUmR6NCdMOu0oF8JJhJZonRQWv5B8kTFwI-zq7RDkyTfEUQTpGbuYCxMMns1P8byyc9jBksF2A8ZMjMH87rzIvQXwen-cvPzf7M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"umar@gmail.com\",\n    \"password\": \"umar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/user/me",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTQzY2RkMTBjM2E5MzVlNGI0NGRjZTJhZTZhMmRkYjBiYmQwZmMwMTk0ZjgwMTM2NGNjMmMxZTk2MDVjOGZkNzQ5MDQwZDIyNDcyODE1MzIiLCJpYXQiOjE2OTQzNzYwNTcuNTA0ODcxLCJuYmYiOjE2OTQzNzYwNTcuNTA0ODcyLCJleHAiOjE2OTQ0NjI0NTcuNTAxOTc2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.3pYBntra8YlOLNe9dYamL-uXA5-K5fhl27k5THyEJqbLZu02sqCK5vea5nk006SM8E3itqVF1Ba4ma6DRXZc-lEU1X1cdNq1hK1FOJERXoC3w1I78DkymnVaePX00P7Ocho6fDBIH6gIWe-me_F_15yiFsxhEpDsgZc55lWNm8QEDdWrKj4Ed_PnfJCmJYGO7-7dULUldw8yrpIyUIC_tzbDWsjjy-EH7JmMKj1Qaik5oO1o_hDyXutZjdpI7pB3vhiAz_gl1qbzapWoS0ehYoXWFo7IWgRccJnf-jP95e_J5Hm9Usr6nt4Hlc-tlGe-KhQZcYMVLWoSAHS6AWYCMbtS4G-KovG-t9FtNmpYapa91Xg65VnklH7EYy_Mhays-6d1dzJVDIntOAwIPQDuQ-14ZI4CBXW0N9V7V8icQ12UKzkheUKUUcoyglq2DWs4OX5RaXNuh8yErJab4wIbv6Scd9ArBDRa7n4m3Ofsc5C1trMMjQI94vIIkzVHMA7p7X7hG1WW9l0ShnmiEnpJNjCucF6H8pvsh3RtjtDaFyWOo4f_dLUTtf6CiWHUkaYGjJq-2VH1SK_QmjRan4pUVj8uDgS1MbZpoSdEXlDTHXaH-Agx5FbjElb7z77SV09DLa2QyoVVwZu6Y3B7_JWjL7IKkNQnK44-dCifcTyExf0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/logout",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmE5MjdkNTM3NGNjNzc2MjllY2NjMDEyNTk5OTE3NTQ1NDc3OTNiOWQ1ZTQ1ZThiMjNiNDY3Nzk3ZmZkZjA3M2NlYWRhZDFkN2Q0ZGJmOTIiLCJpYXQiOjE2OTQ2Njg2MDUuMzI3MTE5LCJuYmYiOjE2OTQ2Njg2MDUuMzI3MTIzLCJleHAiOjE2OTQ3NTUwMDUuMjg0NTYyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.c2G7eiRky48lBLxsHOt1j-QH_yR9ClQLcfdALiOOYMD-Wi_P16H72w-G7J65jKOBm_Doj3qSF5Pqm7UNOi33k7p0O2pD7qSzmdeoJHpoV01zBJmiuc2Fg7awvqS5kPFN47K5Lu5DlIC77CeGUvfJ8c-VDwIat0BZACCegoToSqyGsq2simylYrV59liH8oxDUYQcQ_LVvQtcJRH_wgaQDf6boJD5Qio37Je3IQh9QgieS-WACNtD5iuBOQ_RicCX7wysd52Q6ip8Zwu3VNlKtpXDvIPWFPtZmZhLBMzDkdKHoujYNrQBwSg3EqjUhVv_RSbNbWu2wY8GWJodiQAx5VnqItF4pSH53cIZzT9ll9t2T_RM7gBl1yXXIkxa9bqjrvpzb7IPzv2ojXLeDEDBFXQjqCTElHoA9dCV6cY5DfZoF474LNsAVlTH9OJ_5Tgio1MBuDPkfoISUMIyL2WQ9kma-NkY_L9kMmetvn5gUhH-1nhJb5Wv8fWkP0omwNdUGr7OKAE4t69v4b2bdz_S35zTWAjNIcseTdGeP4_9i05uoW09eAlNUTFyPyRDKEPs7CIUv-t0siosqS3Q6NQpyi3dhXzCwGuyXBlLKRLNuFALxarJIEjVgruID2UFUsJ4q0oGmTlUf1x6tyhoJOj0sj3aWQ1C9ULVGfSzbm6NXek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Selamat ulang tahun brother\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/post",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODE5Y2ZlNTM3YmJhYjZkOTg1NGQxOTk0ZTU3YzIxM2Y2NzM0N2RjMDBiNjkzMDVjM2IzZWIzYjk3ZDc3NzJlZDNkMjA2YjM0OGQ3NmRkZGYiLCJpYXQiOjE2OTQzNDQ4NzUuNjQxMTk1LCJuYmYiOjE2OTQzNDQ4NzUuNjQxMTk2LCJleHAiOjE2OTQ0MzEyNzUuNjM4OTYyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.m7vEScnKHje3Sa-UyMR2YjuekP8MMYXBVqgqGK5rjBcSxdsJ9Q539qa9To6ActPaZevh_PMSQIFsHbWmFzA6SUB2rqeY1yck_mHbp86q6UzZfjWlGn8AYXnors6svNF8q6IrD2sHuaGX-HeRoi0WnxSPpdkyPotzDhFgartQ-G3ELiKtFZ1tBGxT1lHfYGLO784r3WYe08wsoiPEJvun5hGV1fzUj1uVl193k8weGslY0pzJ5ytJHyzSn0cL5vWHX82AFki4I4nzJ5JwQmtVABrhiGjnR_rInSFboUCCmV2Wvy1w1Mbv6Q9_dPBQDg-N_DhJD4Bkt8oR6S7j8qqy64xhH4Wrr9ArhuPZD6avikds0MSlEcNnXg7CqUYYsIb0mo_OBU8p3PyVcE08W8oq-GYEtMGngCusRx99MTWzEtYlTCLBUyCxGX3HaOXkhUeXvyVIFN1tFBuYIpZoFSYv-DKDXq81EyQQLe-aLpcmnRiLWUUSGHpcRywGtszvf0ypC_yfYzI48u19nimxbJmMGj16UFAaws615e0grJZ8xI3vs0zNXi2XktecPROmPI0rbL2WfIv9kCrtW2Pgn8jwyk-N8So5sOylBeJGFcyw1tex-ayx0S5a5OV61OaLOT15DcPjey19Lc9BEG1NsZfG7OPRGA_F7CBhYK3fLLqDmTM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Alhamdulillah akhirnya kelar juga brooooo!!!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/post/update/2",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"post",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGZhM2QyOGIxY2MzY2IzOTJjZTA4YWNkZjExMTFmOWM3MzRiMTU4ZGY2M2U1YzhmYzJlNWY5YTEwYWU4M2IyMDY3MWE1OTBiM2IzY2VkMzgiLCJpYXQiOjE2OTQzNzYzNzkuODAyOTgxLCJuYmYiOjE2OTQzNzYzNzkuODAyOTgyLCJleHAiOjE2OTQ0NjI3NzkuODAxNzcyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q09denotvTsokjiPi_rcfb33SyQEJcJ8ZD2tdiT5DKlaeuSgPtnz1oIys-7AhaDdwtnETGL6Ql0nsLNy7uSE8xEqX7GmRyTms67e60WkJAofLDqdqOkbT_0Ibn7OW6Mgqzl1ZjQlLYvJeSQTgAXJLykDlto3aMeGGAs2538NT5X5L6DxumfQ_a4uQ5A89OV24lSPVoFhDkjeVtShOx52oGRoPBR-hM_wztI0Y8DSqkY2uka8S0NjCM2QLRAtKClyR3xsda3BX_5WGf51B4AzkQMyxkjezdUOtYMmtUnvTewePBHM26JD2DHVrnMW3Ro3EA08FADzAyTdtkC5_lt8FzO-uHRwr-PfuX2zXLP9rAexNtwKaEX5li3wnrFXZ6E418GZfXRkbsTekfNrLZQqGLB0aNQd2VzVmK6pPQy1T--_2ZHUSqJoKqCr_R5XP9jj3ktuONFScXXF_DbvcsFyVhZiS1zuHAmTrhMHNjmAhPtUaGAAy_V47p7mm-4NDMffYSKlUoZLvckhq3MGdZwFmneEflNK6P2jstVtEfy15lTgKSAkXPwi-oU_8AQzLLl0c5zP_sfllKM9-kmzPFF9WPgwxI9wdFKogJPywmg-g_fipYlHL1PCehv6JuIV_bgih8HLRrz1t-giOzkmXHggJnpGR1QVJETeRdcGxP5FoZ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/post/delete/1",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"post",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGZhM2QyOGIxY2MzY2IzOTJjZTA4YWNkZjExMTFmOWM3MzRiMTU4ZGY2M2U1YzhmYzJlNWY5YTEwYWU4M2IyMDY3MWE1OTBiM2IzY2VkMzgiLCJpYXQiOjE2OTQzNzYzNzkuODAyOTgxLCJuYmYiOjE2OTQzNzYzNzkuODAyOTgyLCJleHAiOjE2OTQ0NjI3NzkuODAxNzcyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q09denotvTsokjiPi_rcfb33SyQEJcJ8ZD2tdiT5DKlaeuSgPtnz1oIys-7AhaDdwtnETGL6Ql0nsLNy7uSE8xEqX7GmRyTms67e60WkJAofLDqdqOkbT_0Ibn7OW6Mgqzl1ZjQlLYvJeSQTgAXJLykDlto3aMeGGAs2538NT5X5L6DxumfQ_a4uQ5A89OV24lSPVoFhDkjeVtShOx52oGRoPBR-hM_wztI0Y8DSqkY2uka8S0NjCM2QLRAtKClyR3xsda3BX_5WGf51B4AzkQMyxkjezdUOtYMmtUnvTewePBHM26JD2DHVrnMW3Ro3EA08FADzAyTdtkC5_lt8FzO-uHRwr-PfuX2zXLP9rAexNtwKaEX5li3wnrFXZ6E418GZfXRkbsTekfNrLZQqGLB0aNQd2VzVmK6pPQy1T--_2ZHUSqJoKqCr_R5XP9jj3ktuONFScXXF_DbvcsFyVhZiS1zuHAmTrhMHNjmAhPtUaGAAy_V47p7mm-4NDMffYSKlUoZLvckhq3MGdZwFmneEflNK6P2jstVtEfy15lTgKSAkXPwi-oU_8AQzLLl0c5zP_sfllKM9-kmzPFF9WPgwxI9wdFKogJPywmg-g_fipYlHL1PCehv6JuIV_bgih8HLRrz1t-giOzkmXHggJnpGR1QVJETeRdcGxP5FoZ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Gile, hari ini panas banget 😆\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/posts?type=all",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmFjZWM4MzIwN2MzYmU3NmM0OTg5NzVlZDcyNWQwZjdmYzEyMDhiY2E0MjVhMzIwNWIyYzQ2ZDcxODc5MDc3YWFlMGEyMzE2NTFkNDFkMWUiLCJpYXQiOjE2OTQzNDE5NDUuMTAxMjQ3LCJuYmYiOjE2OTQzNDE5NDUuMTAxMjQ4LCJleHAiOjE2OTQ0MjgzNDUuMDk0NDkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.4a7THl_uvweuiTaetNh7csWaxx972U4F6s6NwWAqJdsrJwLjci8EoWbGWaAW0jG7yka7qVoLuCktRrM8zWE6xRf6vtAq1FR4BvPRlQlHh75wZPGQSGSRoh3-Ut9V29nxm8FhxNWXvIbBu3PLVVU5PJ8iDwfl-PEuFzAuWJWKtTtymYKZHoFytVWW3pxkrtL95ILxmPMTNMD8aCiV4fmiPcQ3wuuUKim02ctNpddwcKRljacgOuCBKIad09yQr4AcJd2bZZI7KLVK4QRfuLYGXtUG23JXzDJ67x_3_slURQXca1aCxzop0Lr4oNI14Y1dmU_4ywoGUJb17QL4CAS0UsNTonA3S32isFFvBrPdwjaeU6O3DDLLn0kjaTRTw9_pmmJEZWkzWXNVrT819vpmzvzSv2QQpPLbhLzcSN22AOmEm38qr7LYdu7gDN-EdXsjrJdmNc2tex_j3HVAyRp-CJYNCdUMd8qIww3mfO-BpODxx0jybUhHdAgn7BD6IpcEM1BeOQWLVX_9xsK433-_tSiBIhbUueVz3Jl4AclC38UuezUfrKdtSe7h6P8ffLCeeEcAkdy8k9U5obRSsneZ7WcNbcozIHcjeuqR1GQEiR9lxCyE0Bt2ECugfmFseSzkfBmhSGyMXZcQOO7YVo7w9UUI0SqJoJhp5GMIN6jbHw8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Gile, hari ini panas banget 😆\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/post/2",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"post",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Likes",
+			"item": [
+				{
+					"name": "Likes By Post ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODE5Y2ZlNTM3YmJhYjZkOTg1NGQxOTk0ZTU3YzIxM2Y2NzM0N2RjMDBiNjkzMDVjM2IzZWIzYjk3ZDc3NzJlZDNkMjA2YjM0OGQ3NmRkZGYiLCJpYXQiOjE2OTQzNDQ4NzUuNjQxMTk1LCJuYmYiOjE2OTQzNDQ4NzUuNjQxMTk2LCJleHAiOjE2OTQ0MzEyNzUuNjM4OTYyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.m7vEScnKHje3Sa-UyMR2YjuekP8MMYXBVqgqGK5rjBcSxdsJ9Q539qa9To6ActPaZevh_PMSQIFsHbWmFzA6SUB2rqeY1yck_mHbp86q6UzZfjWlGn8AYXnors6svNF8q6IrD2sHuaGX-HeRoi0WnxSPpdkyPotzDhFgartQ-G3ELiKtFZ1tBGxT1lHfYGLO784r3WYe08wsoiPEJvun5hGV1fzUj1uVl193k8weGslY0pzJ5ytJHyzSn0cL5vWHX82AFki4I4nzJ5JwQmtVABrhiGjnR_rInSFboUCCmV2Wvy1w1Mbv6Q9_dPBQDg-N_DhJD4Bkt8oR6S7j8qqy64xhH4Wrr9ArhuPZD6avikds0MSlEcNnXg7CqUYYsIb0mo_OBU8p3PyVcE08W8oq-GYEtMGngCusRx99MTWzEtYlTCLBUyCxGX3HaOXkhUeXvyVIFN1tFBuYIpZoFSYv-DKDXq81EyQQLe-aLpcmnRiLWUUSGHpcRywGtszvf0ypC_yfYzI48u19nimxbJmMGj16UFAaws615e0grJZ8xI3vs0zNXi2XktecPROmPI0rbL2WfIv9kCrtW2Pgn8jwyk-N8So5sOylBeJGFcyw1tex-ayx0S5a5OV61OaLOT15DcPjey19Lc9BEG1NsZfG7OPRGA_F7CBhYK3fLLqDmTM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posts_id\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/likes/post/2",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"likes",
+								"post",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Likes By Post ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDJhZmRmNzhkOGJkN2NhMzlmMTQ4NTQ3ZDNjODQ2YmQ3M2VkZWQ4ZjhmNGE1N2E4YjBhM2ZlNmU2NjE1NzdiOTRiNDM2YWZmODY3YjQ3MWUiLCJpYXQiOjE2OTQ4ODUwMzguMjg1MjIzLCJuYmYiOjE2OTQ4ODUwMzguMjg1MjI1LCJleHAiOjE2OTQ5NzE0MzguMjc3MjQ5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.HMOW4hkgn6x_CfpivRxV_0pR5wKs_q7hYQ5SB4nA_VsA8WY3hcd_RKg0RkzhwgAwsqagsRGJmBDAE6cQU-iNz0QLv8A3MAcu_Id07JC2dOvpyVTcWNzDCK5uGnzC4r7iG0d6vsGRBmnwfUqX-6Bocl6u7UFhGlSXdUnlfWV1QSM_9gA-C_51aQMR4S3OG5BuKUhK0l8EWrtVYrB0ZBSoudDT6ZTBGFpMD8rM8piP8MzmSMhYtPTJDCQwLjJNx2OdodFurEg5zQqMXFC5JGQ14DEdwCN2YeSlIDqGkItJcXEMqEfxoLC5-HgFOjCCj4evy_L_szyKtKaUIAO7a9tJj6saInwzqm4i67TpKKr9q0hsGF6pTHPJqmF6o4Cdw-zSPbHmAEBoqx_QvFr0zLQuzjj7blPde3YpoE6XeK5hPRuXUGJl_-i8unwzqerhK6yxNl2GBc9QK-ozoJoE4xxqp_p04TLtdD80fLgvc9QhO6lcpEnpozoZmR0rO7QEllKeKUVY_OscecCx-lA7T3zPN166Vy-b_ByLV0fhDTaJfIOvGVRWgBx9a5x_oZC7P19jOhlh77AVWvor9KlUpPTIA6e3EiSJDqXGvyk0N216B66cR4pjzuqNQmU8E7b6vyAXJr3lwyTK_vx5mYXVKENs3EA0lFVRUc2qSItEFZqCeeY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/likes/post/1",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"likes",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unlikes By Post ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODE5Y2ZlNTM3YmJhYjZkOTg1NGQxOTk0ZTU3YzIxM2Y2NzM0N2RjMDBiNjkzMDVjM2IzZWIzYjk3ZDc3NzJlZDNkMjA2YjM0OGQ3NmRkZGYiLCJpYXQiOjE2OTQzNDQ4NzUuNjQxMTk1LCJuYmYiOjE2OTQzNDQ4NzUuNjQxMTk2LCJleHAiOjE2OTQ0MzEyNzUuNjM4OTYyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.m7vEScnKHje3Sa-UyMR2YjuekP8MMYXBVqgqGK5rjBcSxdsJ9Q539qa9To6ActPaZevh_PMSQIFsHbWmFzA6SUB2rqeY1yck_mHbp86q6UzZfjWlGn8AYXnors6svNF8q6IrD2sHuaGX-HeRoi0WnxSPpdkyPotzDhFgartQ-G3ELiKtFZ1tBGxT1lHfYGLO784r3WYe08wsoiPEJvun5hGV1fzUj1uVl193k8weGslY0pzJ5ytJHyzSn0cL5vWHX82AFki4I4nzJ5JwQmtVABrhiGjnR_rInSFboUCCmV2Wvy1w1Mbv6Q9_dPBQDg-N_DhJD4Bkt8oR6S7j8qqy64xhH4Wrr9ArhuPZD6avikds0MSlEcNnXg7CqUYYsIb0mo_OBU8p3PyVcE08W8oq-GYEtMGngCusRx99MTWzEtYlTCLBUyCxGX3HaOXkhUeXvyVIFN1tFBuYIpZoFSYv-DKDXq81EyQQLe-aLpcmnRiLWUUSGHpcRywGtszvf0ypC_yfYzI48u19nimxbJmMGj16UFAaws615e0grJZ8xI3vs0zNXi2XktecPROmPI0rbL2WfIv9kCrtW2Pgn8jwyk-N8So5sOylBeJGFcyw1tex-ayx0S5a5OV61OaLOT15DcPjey19Lc9BEG1NsZfG7OPRGA_F7CBhYK3fLLqDmTM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/unlikes/post/1",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"unlikes",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Replies",
+			"item": [
+				{
+					"name": "Replies By Post ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGZhM2QyOGIxY2MzY2IzOTJjZTA4YWNkZjExMTFmOWM3MzRiMTU4ZGY2M2U1YzhmYzJlNWY5YTEwYWU4M2IyMDY3MWE1OTBiM2IzY2VkMzgiLCJpYXQiOjE2OTQzNzYzNzkuODAyOTgxLCJuYmYiOjE2OTQzNzYzNzkuODAyOTgyLCJleHAiOjE2OTQ0NjI3NzkuODAxNzcyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q09denotvTsokjiPi_rcfb33SyQEJcJ8ZD2tdiT5DKlaeuSgPtnz1oIys-7AhaDdwtnETGL6Ql0nsLNy7uSE8xEqX7GmRyTms67e60WkJAofLDqdqOkbT_0Ibn7OW6Mgqzl1ZjQlLYvJeSQTgAXJLykDlto3aMeGGAs2538NT5X5L6DxumfQ_a4uQ5A89OV24lSPVoFhDkjeVtShOx52oGRoPBR-hM_wztI0Y8DSqkY2uka8S0NjCM2QLRAtKClyR3xsda3BX_5WGf51B4AzkQMyxkjezdUOtYMmtUnvTewePBHM26JD2DHVrnMW3Ro3EA08FADzAyTdtkC5_lt8FzO-uHRwr-PfuX2zXLP9rAexNtwKaEX5li3wnrFXZ6E418GZfXRkbsTekfNrLZQqGLB0aNQd2VzVmK6pPQy1T--_2ZHUSqJoKqCr_R5XP9jj3ktuONFScXXF_DbvcsFyVhZiS1zuHAmTrhMHNjmAhPtUaGAAy_V47p7mm-4NDMffYSKlUoZLvckhq3MGdZwFmneEflNK6P2jstVtEfy15lTgKSAkXPwi-oU_8AQzLLl0c5zP_sfllKM9-kmzPFF9WPgwxI9wdFKogJPywmg-g_fipYlHL1PCehv6JuIV_bgih8HLRrz1t-giOzkmXHggJnpGR1QVJETeRdcGxP5FoZ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posts_id\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/replies/post/1",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"replies",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replies By Post ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGZhM2QyOGIxY2MzY2IzOTJjZTA4YWNkZjExMTFmOWM3MzRiMTU4ZGY2M2U1YzhmYzJlNWY5YTEwYWU4M2IyMDY3MWE1OTBiM2IzY2VkMzgiLCJpYXQiOjE2OTQzNzYzNzkuODAyOTgxLCJuYmYiOjE2OTQzNzYzNzkuODAyOTgyLCJleHAiOjE2OTQ0NjI3NzkuODAxNzcyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q09denotvTsokjiPi_rcfb33SyQEJcJ8ZD2tdiT5DKlaeuSgPtnz1oIys-7AhaDdwtnETGL6Ql0nsLNy7uSE8xEqX7GmRyTms67e60WkJAofLDqdqOkbT_0Ibn7OW6Mgqzl1ZjQlLYvJeSQTgAXJLykDlto3aMeGGAs2538NT5X5L6DxumfQ_a4uQ5A89OV24lSPVoFhDkjeVtShOx52oGRoPBR-hM_wztI0Y8DSqkY2uka8S0NjCM2QLRAtKClyR3xsda3BX_5WGf51B4AzkQMyxkjezdUOtYMmtUnvTewePBHM26JD2DHVrnMW3Ro3EA08FADzAyTdtkC5_lt8FzO-uHRwr-PfuX2zXLP9rAexNtwKaEX5li3wnrFXZ6E418GZfXRkbsTekfNrLZQqGLB0aNQd2VzVmK6pPQy1T--_2ZHUSqJoKqCr_R5XP9jj3ktuONFScXXF_DbvcsFyVhZiS1zuHAmTrhMHNjmAhPtUaGAAy_V47p7mm-4NDMffYSKlUoZLvckhq3MGdZwFmneEflNK6P2jstVtEfy15lTgKSAkXPwi-oU_8AQzLLl0c5zP_sfllKM9-kmzPFF9WPgwxI9wdFKogJPywmg-g_fipYlHL1PCehv6JuIV_bgih8HLRrz1t-giOzkmXHggJnpGR1QVJETeRdcGxP5FoZ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"JUARAAA !!!!!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/replies/post/1",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"replies",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Replies By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGZhM2QyOGIxY2MzY2IzOTJjZTA4YWNkZjExMTFmOWM3MzRiMTU4ZGY2M2U1YzhmYzJlNWY5YTEwYWU4M2IyMDY3MWE1OTBiM2IzY2VkMzgiLCJpYXQiOjE2OTQzNzYzNzkuODAyOTgxLCJuYmYiOjE2OTQzNzYzNzkuODAyOTgyLCJleHAiOjE2OTQ0NjI3NzkuODAxNzcyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q09denotvTsokjiPi_rcfb33SyQEJcJ8ZD2tdiT5DKlaeuSgPtnz1oIys-7AhaDdwtnETGL6Ql0nsLNy7uSE8xEqX7GmRyTms67e60WkJAofLDqdqOkbT_0Ibn7OW6Mgqzl1ZjQlLYvJeSQTgAXJLykDlto3aMeGGAs2538NT5X5L6DxumfQ_a4uQ5A89OV24lSPVoFhDkjeVtShOx52oGRoPBR-hM_wztI0Y8DSqkY2uka8S0NjCM2QLRAtKClyR3xsda3BX_5WGf51B4AzkQMyxkjezdUOtYMmtUnvTewePBHM26JD2DHVrnMW3Ro3EA08FADzAyTdtkC5_lt8FzO-uHRwr-PfuX2zXLP9rAexNtwKaEX5li3wnrFXZ6E418GZfXRkbsTekfNrLZQqGLB0aNQd2VzVmK6pPQy1T--_2ZHUSqJoKqCr_R5XP9jj3ktuONFScXXF_DbvcsFyVhZiS1zuHAmTrhMHNjmAhPtUaGAAy_V47p7mm-4NDMffYSKlUoZLvckhq3MGdZwFmneEflNK6P2jstVtEfy15lTgKSAkXPwi-oU_8AQzLLl0c5zP_sfllKM9-kmzPFF9WPgwxI9wdFKogJPywmg-g_fipYlHL1PCehv6JuIV_bgih8HLRrz1t-giOzkmXHggJnpGR1QVJETeRdcGxP5FoZ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"gile lu ndo, keren parah wkwk\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/replies/delete/1",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"replies",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "All Notifications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjlhMWI3YTA2M2ZiMTk5ZjU1ZDI0NzRkNDNjYTQzYThkNTUzNTBiNWM4YTJlMzQxNjE2Y2NlYzgyYjY5NTE2MzkwN2VjNmMzOGZhM2UwZDIiLCJpYXQiOjE2OTQ4ODI0MTQuNzcyNDgzLCJuYmYiOjE2OTQ4ODI0MTQuNzcyNDg1LCJleHAiOjE2OTQ5Njg4MTQuNzY4ODE4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.We9z2TB4NMRXD1_D3lb1PsIdjEQnPZv4HsEY5O96V-iSEvC-cy8xRLP7PYvr_8j5wIss9eoE3_95-zCG4SRoWrCDMyKydOu8psyb5Osu0-DX0m_NMskUfkGb3Lx0WcktQ9t69gtnjOfAq4valEl37-S99RGa2mmWdomAaJ7gKg3cN3S9SyGwJLkgYh4Uh5ML-fLPfKt77fzfiC5SCL6AAV7ABN7JYgaBNqqUJTyH-1UiwVulEd42Dj5IQZh0XndTfMOvAb0uj78laTjlw53gAWcyZaM_l1Wzc2TBba_fBgqCdUsqqBcRFFBID7BYHcFBzff2Bxiy40RAb_b9xQr5pd-VYKkpFsH9nU61LwrcAIDGazFQj7v4LL-R9WFzi5fPOoPyWw8VrE-Py5BVhqWEVJDRG4q4O1uWz6VmMU2tZxkmpwyn4dZGfeZxBiU22Mr8wvcPCSfNokupusgija25a9z6bMaLy8vxyKYX1C5GEYGuphmBQl9lzMAcKOYvMQyUs9pbMeYFLZmUNN145w9A8KhOiwzPU7WXr6QywEGTFNmgESklny5p1Eb1JhvVTo6UEEGdw7mVpig9PhSr751snCz2xqJEJ6ugUex6JkcPxVsUgcpBiAwO3sivzuXD3fGlcyzwooHcwBhWrucSVDU1nujddVTKhYGP8rfqkUcwVx8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posts_id\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/notifications",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replies By Post ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGZhM2QyOGIxY2MzY2IzOTJjZTA4YWNkZjExMTFmOWM3MzRiMTU4ZGY2M2U1YzhmYzJlNWY5YTEwYWU4M2IyMDY3MWE1OTBiM2IzY2VkMzgiLCJpYXQiOjE2OTQzNzYzNzkuODAyOTgxLCJuYmYiOjE2OTQzNzYzNzkuODAyOTgyLCJleHAiOjE2OTQ0NjI3NzkuODAxNzcyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q09denotvTsokjiPi_rcfb33SyQEJcJ8ZD2tdiT5DKlaeuSgPtnz1oIys-7AhaDdwtnETGL6Ql0nsLNy7uSE8xEqX7GmRyTms67e60WkJAofLDqdqOkbT_0Ibn7OW6Mgqzl1ZjQlLYvJeSQTgAXJLykDlto3aMeGGAs2538NT5X5L6DxumfQ_a4uQ5A89OV24lSPVoFhDkjeVtShOx52oGRoPBR-hM_wztI0Y8DSqkY2uka8S0NjCM2QLRAtKClyR3xsda3BX_5WGf51B4AzkQMyxkjezdUOtYMmtUnvTewePBHM26JD2DHVrnMW3Ro3EA08FADzAyTdtkC5_lt8FzO-uHRwr-PfuX2zXLP9rAexNtwKaEX5li3wnrFXZ6E418GZfXRkbsTekfNrLZQqGLB0aNQd2VzVmK6pPQy1T--_2ZHUSqJoKqCr_R5XP9jj3ktuONFScXXF_DbvcsFyVhZiS1zuHAmTrhMHNjmAhPtUaGAAy_V47p7mm-4NDMffYSKlUoZLvckhq3MGdZwFmneEflNK6P2jstVtEfy15lTgKSAkXPwi-oU_8AQzLLl0c5zP_sfllKM9-kmzPFF9WPgwxI9wdFKogJPywmg-g_fipYlHL1PCehv6JuIV_bgih8HLRrz1t-giOzkmXHggJnpGR1QVJETeRdcGxP5FoZ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"JUARAAA !!!!!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paace-f178cafcae7b.nevacloud.io/api/replies/post/1",
+							"protocol": "https",
+							"host": [
+								"paace-f178cafcae7b",
+								"nevacloud",
+								"io"
+							],
+							"path": [
+								"api",
+								"replies",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

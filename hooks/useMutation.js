@@ -8,7 +8,7 @@ export const useMutations = () => {
     isError: false,
   });
 
-  const mutate = useCallback(async ({ url = "", method = "POST", payload = {} } = {}) => {
+  const mutate = useCallback(async ({ url = "", method = "POST", payload = {}, headers = {} } = {}) => {
     setData({
       ...data,
       isLoading: true,
@@ -17,9 +17,10 @@ export const useMutations = () => {
       const response = await fetch(url, {
         method,
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          ...headers,
         },
-        body: JSON.stringify(payload)
+        ...(method !== 'GET' && { body: JSON.stringify(payload) })
       })
       const result = await response.json()
       setData({
